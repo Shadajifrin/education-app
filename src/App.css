@@ -1,104 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f8f8;
 }
-.container{
+
+.container {
   max-width: 95%;
   margin: auto;
 }
-.flexSB{
+
+.flexSB {
   display: flex;
   justify-content: space-between;
 }
-.head{
+
+.head {
   padding: 20px 0;
   color: #fff;
 }
-.logo h1{
+
+.logo h1 {
   font-size: 35px;
   font-weight: 900;
 }
-.head .icon{
-margin-left: 10px;
+
+.head .icon {
+  margin-left: 10px;
 }
 
-.icon i{
+.icon i {
   width: 40px;
   height: 40px;
   line-height: 40px;
   border-radius: 50%;
   text-align: center;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   color: #1eb2a6;
-  gap :20px;
+  gap: 20px;
   transition: 0.5s;
 }
-.icon i:hover{
+
+.icon i:hover {
   cursor: pointer;
   background-color: #1eb2a6;
   color: #fff;
 }
+
 /*...............header................*/
-header{
-  background-color: rgba(255,255,255,0.3);
-  margin:0 30px ;
+header {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 30px;
 }
-header ul
-{
+
+header ul {
   padding: 30px 20px;
 }
-a{
+
+a {
   text-decoration: none;
 }
-li{
+
+li {
   list-style-type: none;
 }
-header li{
+
+header li {
   margin-right: 40px;
 }
-header ul li{
+
+header ul li {
   color: #fff;
-  font-weight:500 ;
+  font-weight: 500;
   transition: 0.5s;
 }
-header ul  li:hover{
+
+header ul li:hover {
   color: #1eb2a6;
 }
-.start{
+
+.start {
   background-color: #1eb2a6;
   padding: 30px 70px;
-  color:#fff;
-  clip-path: polygon(10% 0,100% 0,100% 100%,0 100%);
+  color: #fff;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 }
-.toggle{
+
+.toggle {
   display: none;
 }
-button{
+
+button {
   border: none;
 }
-.home{
+
+.home {
   background-image: url('./src/assets/bg.webp');
   background-size: cover;
   background-attachment: fixed;
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100vh;
-  padding-top:213px;
+  padding-top: 213px;
   padding-right: 50px;
   color: #fff;
 }
-.row{
+
+.row {
   width: 50%;
 }
+
 .row button {
   padding: 17px 30px;
   background-color: #fff;
@@ -110,138 +130,214 @@ button{
   cursor: pointer;
   box-shadow: 0 24px 36px -11px rgba(0 0 0 /9%);
 }
-button i{
+
+button i {
   margin-left: 20px;
 }
-button:hover{
+
+button:hover {
   box-shadow: none;
 }
-.primary-btn{
+
+.primary-btn {
   background-color: #1eb2a6;
   color: #fff;
 }
-#heading{
+
+#heading {
   text-align: center;
   padding: 40px 0;
 }
-#heading h3{
+
+#heading h3 {
   font-weight: 600;
   letter-spacing: 1px;
   color: #1eb2a6;
   text-transform: uppercase;
 }
-#heading h1{
+
+#heading h1 {
   font-size: 45px;
   margin: 20px 0;
   text-transform: capitalize;
 }
-.home p{
+
+.home p {
   line-height: 30px;
   font-size: 18px;
 }
-.home #heading h3{
-  color:#fff;
+
+.home #heading h3 {
+  color: #fff;
 }
-.home #heading{
+
+.home #heading {
   text-align: left;
   margin: 0;
   padding: 0;
 }
-.back{
+
+.back {
   background-image: url('./src/assets/back.webp');
   background-size: cover;
   background-attachment: fixed;
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100vh;
-  padding-top:30%;
+  padding-top: 30%;
   padding-right: 50px;
   color: #fff;
   text-align: center;
 }
-.back h2{
+
+.back h2 {
   font-size: 100px;
   font-weight: 400;
 }
-.back h1{
+
+.back h1 {
   font-weight: 500;
   font-size: 17px;
   text-transform: uppercase;
 }
-.back .margin{
+
+.back .margin {
   margin-top: 40.3%;
 }
+
 .aboutHome {
+  display: flex;
+  align-items: stretch;
   height: auto;
 }
-.aboutHome #heading {
-  text-align: left;
-  padding-top: 440px;
+
+.aboutHome .left-row {
+  flex: 0 0 auto;
+  /* Don't grow or shrink the left column */
+  width: 50%;
+  /* Adjust the width as needed */
+  overflow: hidden;
+  /* Hide any potential overflow */
 }
+
 .aboutHome .left-row img {
-  padding-top: 440px;
+  margin-top: 490px;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
+
 .aboutHome .right-row {
+  flex: 1;
+  /* Allow the right column to grow and fill available space */
   padding: 80px 50px;
 }
+
 .aboutHome .items {
-  margin-top: 50px;
+  margin-top: -68px;
+  display: flex;
+  flex-direction: column;
+
 }
-.aboutHome .item {
+
+.aboutHome .items-flexSB {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
   background-color: #fff;
-  margin-top: 30px;
   padding: 20px;
   transition: 0.5s;
 }
+
 .aboutHome .img {
-  width: 200px;
+  width: 80px;
 }
-.aboutHome img {
-  width: 70px;
-  height: 70px;
+
+.aboutHome .text {
+  margin-left: 20px;
 }
-.aboutHome .item h2 {
+
+.aboutHome #heading {
+  text-align: left;
+  margin-top: 348px;
+}
+
+.aboutHome .text h2 {
   font-size: 20px;
   margin-bottom: 15px;
 }
-.aboutHome .item p {
+
+.aboutHome .text p {
   color: #999999;
 }
-.aboutHome .item:hover {
+
+.aboutHome .items-flexSB:hover {
   background-color: #1eb2a6;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
 }
-.aboutHome .item:hover p {
+
+.aboutHome .text:hover p {
   color: #fff;
 }
-@media  screen and (max-width:768px) {
- body{
-  overflow:auto;
- }
-  .start{
+.awrapper{
+  background-image: url('./src/assets/awrapper.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  color: #fff;
+}
+.awrapper .box {
+  padding: 70px 0;
+}
+.awrapper-img {
+  margin-right: 30px;
+}
+.awrapper h1 {
+  font-size: 50px;
+}
+.awrapper h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.awrapper .grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap:30px;
+}
+.flex{
+  display: flex;
+  
+}
+@media screen and (max-width:768px) {
+  body {
+    overflow: auto;
+  }
+
+  .start {
     clip-path: none;
   }
-  header{
+
+  header {
     margin: 0;
     background-color: #1eb2a6;
     position: relative;
   }
-  header ul.flexSB{
+
+  header ul.flexSB {
     display: none;
   }
-  header ul li{
+
+  header ul li {
     margin-bottom: 20px;
   }
 
-  .toggle{
+  .toggle {
     display: block;
     background-color: #1eb2a6;
     color: #fff;
@@ -250,22 +346,27 @@ button:hover{
     right: 20px;
     top: 20px;
   }
-  .mobile-nav{
+
+  .mobile-nav {
     position: absolute;
     top: 7vh;
     left: 0;
     width: 100%;
     background-color: #1eb2a6;
   }
-  .margin{
+
+  .margin {
     height: 40vh;
   }
-.home{
-    background-position:center right;
-    padding-top:50vh ;
+
+  .home {
+    background-position: center right;
+    padding-top: 50vh;
     height: auto;
   }
-  .home .row{
+
+  .home .row {
     width: 100%;
-  } 
+  }
+
 }

@@ -2,6 +2,7 @@
 import React from 'react'
 import Back from './Back'
 import AboutCard from './AboutCard'
+
 function About() {
   
   return (
