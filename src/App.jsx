@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import { BrowserRouter as Router,Switch,Route} from 'react-router-dom/cjs/react-router-dom.min'
 import './App.css'
+import CourseHome from './components/CourseHome'
 const App = () => {
   return (
     <div>
@@ -14,7 +15,7 @@ const App = () => {
     <Switch>
      <Route exact path='/' component={Home}/>
      <Route exact path='/about' component={About}/>
-     
+     <Route exact path='/courses' component={CourseHome}/>
   
     
   

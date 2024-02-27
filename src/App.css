@@ -75,13 +75,13 @@ header li {
   margin-right: 40px;
 }
 
-header ul li {
+header ul li a {
   color: #fff;
   font-weight: 500;
   transition: 0.5s;
 }
 
-header ul li:hover {
+header ul li a:hover {
   color: #1eb2a6;
 }
 
@@ -216,11 +216,9 @@ button:hover {
 
 .aboutHome .left-row {
   flex: 0 0 auto;
-  /* Don't grow or shrink the left column */
   width: 50%;
-  /* Adjust the width as needed */
   overflow: hidden;
-  /* Hide any potential overflow */
+
 }
 
 .aboutHome .left-row img {
@@ -232,7 +230,6 @@ button:hover {
 
 .aboutHome .right-row {
   flex: 1;
-  /* Allow the right column to grow and fill available space */
   padding: 80px 50px;
 }
 
@@ -284,7 +281,8 @@ button:hover {
 .aboutHome .text:hover p {
   color: #fff;
 }
-.awrapper{
+
+.awrapper {
   background-image: url('./src/assets/awrapper.webp');
   background-repeat: no-repeat;
   background-size: cover;
@@ -292,28 +290,104 @@ button:hover {
   height: 30vh;
   color: #fff;
 }
+
 .awrapper .box {
   padding: 70px 0;
 }
+
 .awrapper-img {
   margin-right: 30px;
 }
+
 .awrapper h1 {
   font-size: 50px;
 }
+
 .awrapper h3 {
   font-size: 20px;
   font-weight: 500;
 }
-.awrapper .grid{
+
+.awrapper .grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-gap:30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
 }
-.flex{
+
+.flex {
   display: flex;
+
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.courseCard {
+  margin-top: 500px;
+  padding: 50px 0;
   
 }
+.courseCard .course-items {
+  background-color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+.courseCard .course-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1eb2a6;
+  padding: 15px;
+}
+.courseCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.courseCard .course-text {
+  margin-left: 15px;
+  text-align: left;
+}
+.courseCard .course-text h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+}
+.courseCard .course-rate {
+  margin: 20px 0;
+  color: #1eb2a6;
+}
+.courseCard .course-rate i {
+  font-size: 13px;
+  margin-right: 5px;
+}
+.courseCard .details .dimg img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.courseCard .details .box {
+  display: flex;
+  align-items: center;
+  color: grey;
+}
+.courseCard .details span {
+  color: #1eb2a6;
+  font-weight: 500;
+  font-size: 14px;
+}
+.courseCard .price {
+  margin: 30px 0;
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+.courseCard h3 {
+  font-weight: 500;
+  color: #1eb2a6;
+}
+
 @media screen and (max-width:768px) {
   body {
     overflow: auto;
@@ -369,4 +443,36 @@ button:hover {
     width: 100%;
   }
 
+  .back {
+    background-position: center;
+    padding-top: 50%;
+    height: 80vh;
+  }
+
+  .aboutHome {
+    margin-top: 10%;
+  }
+
+  .aboutHome .container {
+    flex-direction: column-reverse;
+  }
+
+  .aboutHome .row {
+    width: 100%;
+  }
+  .aboutHome .left-row img {
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .awrapper {
+    height: 50vh;
+  }
+
+  .grid2,
+  .grid3,
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

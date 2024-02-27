@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Title from './Title'
+import AboutCard from './AboutCard'
 function Home() {
   // eslint-disable-next-line react/prop-types
   return (
@@ -22,6 +23,7 @@ function Home() {
   </div>
 </section>
 <div className='margin'></div>
+<AboutCard />
     </div>
   )
 }
