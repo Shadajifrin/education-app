@@ -1,9 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import OnlineCourse from './OnlineCourse';
-
-
-const CourseCard = () => {
+import React from "react"
+import Title from "./Title"
+const HAbout = () => {
   const coursesCard = [
     {
       id: 1,
@@ -133,57 +131,63 @@ const CourseCard = () => {
     },
   ];
   return (
-    <div>
-      <section className='courseCard'>
-        <div className='container grid2'>
-          {coursesCard.map((val) => (
-            <div className='course-items' key={val.id}>
-              <div className='content flex'>
-                <div className='course-left'>
-                  <div className='course-img'>
-                    <img src={val.cover} alt='' />
+    <>
+      <section className='homeAbout'>
+        <div className='container'>
+          <Title subtitle='our courses' title='explore our popular online courses' />
+
+          <div className='courseCard'>
+            {/* copy code form  coursesCard */}
+            <div className='grid2'>
+              {coursesCard.slice(0, 3).map((val,index) => (
+                <div className='course-items' key={index}>
+                  <div className='content flex'>
+                    <div className='course-left'>
+                      <div className='course-img'>
+                        <img src={val.cover} alt='' />
+                      </div>
+                    </div>
+                    <div className='course-text'>
+                      <h1>{val.coursesName}</h1>
+                      <div className='course-rate'>
+                        <i className='fa fa-star'></i>
+                        <i className='fa fa-star'></i>
+                        <i className='fa fa-star'></i>
+                        <i className='fa fa-star'></i>
+                        <i className='fa fa-star'></i>
+                        <label htmlFor=''>(5.0)</label>
+                      </div>
+                      <div className='course-details'>
+                        {val.courTeacher.map((details) => (
+                          <>
+                            <div className='box'>
+                              <div className='dimg'>
+                                <img src={details.dcover} alt='' />
+                              </div>
+                              <div className='para'>
+                                <h4>{details.name}</h4>
+                              </div>
+                            </div>
+                            <span>{details.totalTime}</span>
+                          </>
+                        ))}
+                      </div>
+                    </div>
                   </div>
+                  <div className='course-price'>
+                    <h3>
+                      {val.priceAll} / {val.pricePer}
+                    </h3>
+                  </div>
+                  <button className='outline-btn'>ENROLL NOW !</button>
                 </div>
-                <div className='course-text'>
-                  <h1>{val.coursesName}</h1>
-                  <div className='course-rate'>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <label htmlFor=''>(5.0)</label>
-                  </div>
-                  <div className='course-details'>
-                    {val.courTeacher.map((details, index) => (
-                      <React.Fragment key={index}>
-                        <div className='box'>
-                          <div className='dimg'>
-                            <img src={details.dcover} alt='' />
-                          </div>
-                          <div className='para'>
-                            <h4>{details.name}</h4>
-                          </div>
-                        </div>
-                        <span>{details.totalTime}</span>
-                      </React.Fragment>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className='course-price'>
-                <h3>
-                  {val.priceAll} / {val.pricePer}
-                </h3>
-              </div>
-              <button className='outline-btn'>ENROLL NOW !</button>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
-      <OnlineCourse />
-    </div>
+    </>
   )
 }
 
-export default CourseCard
+export default HAbout

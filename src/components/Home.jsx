@@ -2,6 +2,7 @@
 import React from 'react'
 import Title from './Title'
 import AboutCard from './AboutCard'
+import HAbout from './HAbout'
 function Home() {
   // eslint-disable-next-line react/prop-types
   return (
@@ -24,6 +25,7 @@ function Home() {
 </section>
 <div className='margin'></div>
 <AboutCard />
+<HAbout />
     </div>
   )
 }
