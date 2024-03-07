@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react"
 import Title from "./Title"
+import OnlineCourse from "./OnlineCourse"
 const HAbout = () => {
   const coursesCard = [
     {
@@ -186,6 +187,7 @@ const HAbout = () => {
           </div>
         </div>
       </section>
+      <OnlineCourse />
     </>
   )
 }
