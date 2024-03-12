@@ -499,7 +499,7 @@ button:hover {
   margin-top: auto;
 }
 
-.grid {
+.team .grid {
   margin-top: 400px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -578,7 +578,9 @@ button:hover {
   padding: 30px;
   transition: 0.5s;
 }
-
+.testimonal .test-img{
+  position: relative;
+}
 .testimonal .test-img img {
   width: 100px;
   height: 100px;
@@ -586,13 +588,19 @@ button:hover {
 }
 
 .testimonal i {
-  position: absolute;
-  bottom: 0;
-  left: 60px;
-  background-color: #1eb2a6;
-  color: #fff;
-}
-
+    position: absolute;
+    bottom: 0; 
+    left: 60px;
+    transform: translateX(-50%);
+    background-color: #1eb2a6;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 .testimonal .test-name {
   margin: 25px;
 }
@@ -627,7 +635,189 @@ button:hover {
   background-color: #fff;
   color: #1eb2a6;
 }
+.price .grid{
+  margin-top: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.price .price-items{
+  padding: 40px;
+  text-align: center;
+}
+.price .price-items h1{
+  font-size: 50px;
+  margin: 20px 0;
+  color: #1eb2a6;
+}
+.price h1 span{
+  font-size:30px;
+  margin-right: 5px;
+  color: #000;
+}
+.price p{
+  color: grey;
+  margin: 40px 0;
+}
+.faq .container{
+  max-width: 70%;
+  border-radius: 5px;
+}
+.faq .faq-box{
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.faq button{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 20px;
+}
+.faq h2{
+  font-weight: 500;
 
+}
+.faq p {
+  padding: 20px;
+}
+.accordion{
+  transition: 0.5s;
+  color: #1eb2a6;
+}
+.faq .accordion:hover {
+  background-color: #1eb2a6;
+  color: #fff;
+}
+.blog .grid2{
+  margin-top: 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.blog .blog-img img{
+  width:100% ;
+  height: 100%;
+}
+.blog .blog-text{
+  padding: 40px 30px;
+}
+.blog .blog-text h1{
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  margin: 20px 0;
+  transition: 0.5s;
+}
+.blog .blog-text h1:hover{
+  color: #1eb2a6;
+  cursor: pointer;
+}
+.blog span{
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #1eb2a6;
+  padding: 4px;
+ }
+ .blog span label{
+  margin-left: 10px;
+  color: grey;
+  font-size: 14px;
+ }
+ .blog span:nth-last-child(1) label {
+  color: #1eb2a6;
+}
+.blog p {
+  color: grey;
+}
+.homeBlog .grid2{
+  margin-top: 4px;
+}
+.hPrice .grid{
+  margin-top: 0;
+}
+.contact {
+  margin-top: 400px;
+  padding: 50px;
+}
+.contact iframe{
+  width:100%;
+  height: 100%;
+  border: none;
+}
+.contact .right{
+ padding: 50px;
+}
+.contact h1{
+  font-size:30px;
+  font-weight: 400;
+}
+.contact p{
+  color: grey;
+}
+.contact .items {
+  margin: 30px 0;
+}
+.contact .contact-box p{
+  font-size: 17px;
+  margin-top: 10px;
+}
+.contact textarea,
+.contact input{
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 1px solid grey;
+}
+.contact form .flexSB input:nth-child(1){
+  margin-right: 10px;
+}
+.contact h3{
+  margin-top: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact span {
+  color: #1eb2a6;
+  font-weight: 600;
+  font-size: 15px;
+  word-spacing: 5px;
+}
+.newsletter{
+  background-color: #1eb2a6;
+  margin-top: 50px;
+  padding: 50px 0;
+  color: #fff;
+}
+.newsletter .left,
+.newsletter .right{
+  padding-right: 50px;
+}
+.newsletter h1{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.newsletter .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newsletter input{
+width: 100%;
+padding: 20px;
+border: none;
+outline: none;
+height: 30px;
+}
+.newsletter i{
+  padding: 12px;
+  color: #1eb2a6;
+  
+}
 @media screen and (max-width:768px) {
   body {
     overflow: auto;
@@ -716,5 +906,13 @@ button:hover {
   .grid3,
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  } .contact .container {
+    flex-direction: column;
+  }
+  .contact iframe {
+    height: 50vh;
+  }
+  .contact .row {
+    width: 100%;
   }
 }

@@ -4,6 +4,8 @@ import Title from './Title'
 import AboutCard from './AboutCard'
 import HAbout from './HAbout'
 import Test from '../Test'
+import Hblog from '../Hblog'
+import Hprice from '../Hprice'
 function Home() {
   // eslint-disable-next-line react/prop-types
   return (
@@ -28,6 +30,8 @@ function Home() {
 <AboutCard />
 <HAbout />
 <Test />
+<Hblog />
+<Hprice/>
     </div>
   )
 }

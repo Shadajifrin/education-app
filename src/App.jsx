@@ -7,6 +7,10 @@ import Team from './components/Team'
 import { BrowserRouter as Router,Switch,Route} from 'react-router-dom/cjs/react-router-dom.min'
 import './App.css'
 import CourseHome from './components/CourseHome'
+import Price from './components/Price'
+import blog from './blog'
+import Contact from './Contact'
+import Footer from './footer'
 const App = () => {
   return (
     <div>
@@ -18,9 +22,11 @@ const App = () => {
      <Route exact path='/about' component={About}/>
      <Route exact path='/courses' component={CourseHome}/>
      <Route exact path='/team' component={Team}/>
-    
-  
+     <Route exact path='/pricing' component={Price}/>
+      <Route exact path='/journal' component={blog}/>
+      <Route exact path='/contact' component={Contact}/>
     </Switch>
+    <Footer />
    </Router>
     </div>
   )
