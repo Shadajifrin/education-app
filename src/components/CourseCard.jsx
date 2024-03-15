@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import OnlineCourse from './OnlineCourse';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+
 
 
 const CourseCard = () => {
@@ -132,6 +134,9 @@ const CourseCard = () => {
       pricePer: "$3 per month",
     },
   ];
+
+ 
+  
   return (
     <div>
       <section className='courseCard'>
@@ -176,7 +181,8 @@ const CourseCard = () => {
                   {val.priceAll} / {val.pricePer}
                 </h3>
               </div>
-              <button className='outline-btn'>ENROLL NOW !</button>
+              <Link to='/form'><button className='outline-btn' >
+                ENROLL NOW !</button></Link>
             </div>
           ))}
         </div>

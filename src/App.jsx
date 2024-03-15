@@ -11,6 +11,7 @@ import Price from './components/Price'
 import blog from './blog'
 import Contact from './Contact'
 import Footer from './footer'
+import EnrollmentForm from './components/EnrollmentForm'
 const App = () => {
   return (
     <div>
@@ -25,6 +26,7 @@ const App = () => {
      <Route exact path='/pricing' component={Price}/>
       <Route exact path='/journal' component={blog}/>
       <Route exact path='/contact' component={Contact}/>
+      <Route exact path='/form' component={EnrollmentForm}/>
     </Switch>
     <Footer />
    </Router>
