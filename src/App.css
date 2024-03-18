@@ -888,6 +888,56 @@ footer .last i {
   font-size: 20px;
   color: #1eb2a6;
 }
+/* Container styling */
+.enrollment-form {
+  max-width: 400px;
+  margin-top: 500px;
+  margin-left: 500px;
+  padding: 20px;
+}
+
+/* Heading styling */
+.enrollment-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Input field styling */
+.enrollment-form input[type="text"],
+.enrollment-form input[type="email"],
+.enrollment-form input[type="tel"],
+.enrollment-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.enrollment-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1eb2a6;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Dropdown styling */
+.enrollment-form select {
+  background-color: #fff;
+}
+
+/* Label styling */
+.enrollment-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
 
 @media screen and (max-width:768px) {
