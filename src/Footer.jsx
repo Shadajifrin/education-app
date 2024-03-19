@@ -1,7 +1,12 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React,{useState} from 'react'
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    };
     const blog = [
         {
             id: 1,
@@ -58,7 +63,22 @@ const Footer = () => {
             cover: "../images/blog/b6.webp",
         },
     ];
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(email)
+        }; 
+        const res = await fetch('https://react-email-75fb7-default-rtdb.firebaseio.com/emailData.json', options);
+        if (res.ok) {
+            alert('Email sent Successfully');
+        } else {
+            alert('Error Occurred');
+        }
+    };
     return (
         <div>
             <section className="newsletter">
@@ -68,8 +88,8 @@ const Footer = () => {
                         <span>far far away,behind the world mountains</span>
                     </div>
                     <div className="right row">
-                        <input type='text' placeholder='Enter email address' />
-                        <i className='fa fa-paper-plane'></i>
+                        <input type='text' placeholder='Enter email address' onChange={handleEmailChange} />
+                        <i className='fa fa-paper-plane' onClick={handleSubmit}></i>
                     </div>
                 </div>
             </section>

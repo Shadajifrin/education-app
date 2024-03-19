@@ -6,6 +6,7 @@ import HAbout from './HAbout'
 import Test from '../Test'
 import Hblog from '../Hblog'
 import Hprice from '../Hprice'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 function Home() {
   // eslint-disable-next-line react/prop-types
   return (
@@ -19,9 +20,9 @@ function Home() {
         <button className='primary-btn'>
           GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
         </button>
-        <button>
+        <Link To='./CourseHome'><button>
           VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
-        </button>
+        </button></Link>
       </div>
     </div>
   </div>

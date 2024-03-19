@@ -659,6 +659,56 @@ button:hover {
   color: grey;
   margin: 40px 0;
 }
+.payment-options {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.payment-options h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1eb2a6;
+}
+
+.payment-select,
+.upi-input {
+  margin-bottom: 15px;
+}
+
+.payment-select label,
+.upi-input label {
+  align-items: center;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.payment-select select,
+.upi-input input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.done-btn {
+  padding: 10px 20px;
+  background-color: #1eb2a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.done-btn:hover {
+  background-color: #1eb2a6;
+}
+
 .faq .container{
   max-width: 70%;
   border-radius: 5px;
@@ -888,7 +938,7 @@ footer .last i {
   font-size: 20px;
   color: #1eb2a6;
 }
-/* Container styling */
+
 .enrollment-form {
   max-width: 400px;
   margin-top: 500px;
@@ -896,13 +946,12 @@ footer .last i {
   padding: 20px;
 }
 
-/* Heading styling */
+
 .enrollment-form h2 {
   margin-bottom: 20px;
   font-size: 24px;
 }
 
-/* Input field styling */
 .enrollment-form input[type="text"],
 .enrollment-form input[type="email"],
 .enrollment-form input[type="tel"],
@@ -915,7 +964,9 @@ footer .last i {
   box-sizing: border-box;
 }
 
-/* Button styling */
+.enrollment-form .error{
+  color: red;
+}
 .enrollment-form button[type="submit"] {
   width: 100%;
   padding: 10px;
@@ -927,19 +978,15 @@ footer .last i {
   cursor: pointer;
 }
 
-/* Dropdown styling */
+
 .enrollment-form select {
   background-color: #fff;
 }
-
-/* Label styling */
 .enrollment-form label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
-
-
 @media screen and (max-width:768px) {
   body {
     overflow: auto;

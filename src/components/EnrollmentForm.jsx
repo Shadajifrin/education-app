@@ -9,7 +9,11 @@ const EnrollmentForm = () => {
     Number: '',
     Course: ''
   });
-
+  const [errors, setErrors] = useState({
+    Name: '',
+    Email: '',
+    Number: ''
+  });
   const courses = [
     { id: 1, name: 'Introducing to Software Engineering' },
     { id: 2, name: 'Enhancing Adobe Photoshop CC 2020 Skills' },
@@ -24,6 +28,22 @@ const EnrollmentForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
+    validateInput(name, value);
+  };
+  const validateInput = (name, value) => {
+    switch (name) {
+      case 'Name':
+        setErrors({...errors, [name]: value.match(/^[a-zA-Z\s]*$/) ? '' : 'Name must contain only letters and spaces'});
+        break;
+      case 'Email':
+        setErrors({...errors, [name]: value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/) ? '' : 'Invalid email address'});
+        break;
+      case 'Number':
+        setErrors({...errors, [name]: value.match(/^\d{10}$/) ? '' : 'Phone number must be 10 digits'});
+        break;
+      default:
+        break;
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -60,6 +80,7 @@ const EnrollmentForm = () => {
             onChange={handleChange}
             required
           />
+          <span className="error">{errors.Name}</span>
         </div>
         <div>
           <label className="email">Email:</label>
@@ -72,6 +93,7 @@ const EnrollmentForm = () => {
             onChange={handleChange}
             required
           />
+              <span className="error">{errors.Email}</span>
         </div>
         <div>
           <label className="phoneNumber">Phone Number:</label>
@@ -84,6 +106,7 @@ const EnrollmentForm = () => {
             onChange={handleChange}
             required
           />
+              <span className="error">{errors.Number}</span>
         </div>
         <div>
           <label className="selectedCourse">Select Course:</label>
