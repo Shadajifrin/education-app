@@ -3,6 +3,7 @@ import React from 'react'
 import Back from "./Back"
 import PriceCard from './PriceCard'
 import Faq from './faq'
+import Footer from '../footer'
 
 const Price = () => {
   return (
@@ -10,6 +11,7 @@ const Price = () => {
       <Back title="Choose The Right Plan" />
       <PriceCard />
        <Faq />
+       <Footer/>
         </div>
      
   )

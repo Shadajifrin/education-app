@@ -987,6 +987,128 @@ footer .last i {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
+.login-container {
+  margin-top: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Form styling */
+.login-form {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.login-h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #509a93;
+}
+
+/* Input field styling */
+.input-username,
+.input-password {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.error-msg {
+  color: red;
+  margin-bottom: 10px;
+}
+
+
+.link-forgot {
+  display: block;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  color:blue;
+}
+
+/* Login button styling */
+.btn-login {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1eb2a6;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color:#fff;
+  color: #1eb2a6;
+}.forgot-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+.forgot{
+  margin-left: 500px;
+  margin-top: 90px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-h1{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #509a93;
+}
+.forgot .input-email{
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.forgot-p{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #509a93;
+}
+.btn-forgot{
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1eb2a6;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-forgot:hover{
+  background-color:#fff;
+  color: #1eb2a6;
+}
 @media screen and (max-width:768px) {
   body {
     overflow: auto;

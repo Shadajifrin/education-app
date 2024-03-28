@@ -66,7 +66,7 @@ const EnrollmentForm = () => {
 
   return (
     <div className='enrollment-form'>
-      <Back title="Enrollment Form" />
+      <Back title='Enrollment Form' />
       <h2>Enrollment Form</h2>
       <form onSubmit={handleSubmit}>
         <div>

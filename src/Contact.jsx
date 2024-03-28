@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 import Back from './components/Back'
+import Footer from './footer';
 
 
 const Contact = () => {
@@ -72,6 +73,7 @@ const Contact = () => {
                     </div>
                 </div >
             </section >
+            <Footer/>
         </div >
     )
 }

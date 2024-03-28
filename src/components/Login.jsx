@@ -1,19 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Back from './Back'
-import AboutCard from './AboutCard'
+import LoginForm from './LoginForm'
 import Footer from '../footer'
 
-function About() {
-  
+const Login = () => {
   return (
     <div>
-      
-      <Back title='About Us' />
-      <AboutCard />
-      <Footer />
+      <Back  title='Login'/>
+      <LoginForm/>
+      <Footer/>
     </div>
   )
 }
 
-export default About
+export default Login

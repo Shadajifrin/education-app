@@ -2,6 +2,7 @@
 import React from 'react'
 import OnlineCourse from './OnlineCourse';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import Footer from '../footer';
 
 
 
@@ -188,6 +189,7 @@ const CourseCard = () => {
         </div>
       </section>
       <OnlineCourse />
+      <Footer />
     </div>
   )
 }

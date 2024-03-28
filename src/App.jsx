@@ -4,14 +4,18 @@ import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
 import Team from './components/Team'
-import { BrowserRouter as Router,Switch,Route} from 'react-router-dom/cjs/react-router-dom.min'
+import { BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import './App.css'
 import CourseHome from './components/CourseHome'
 import Price from './components/Price'
 import blog from './blog'
 import Contact from './Contact'
-import Footer from './footer'
 import EnrollmentForm from './components/EnrollmentForm'
+import Login from './components/Login'
+import FrontPage from './components/FrontPage'
+import LoginForm from './components/LoginForm'
+import Forgot from './components/Forgot'
+
 const App = () => {
   return (
     <div>
@@ -19,7 +23,8 @@ const App = () => {
    <Router>
    <Header />
     <Switch>
-     <Route exact path='/' component={Home}/>
+    <Route exact path='/' component={FrontPage}/>
+     <Route exact path='/home' component={Home}/>
      <Route exact path='/about' component={About}/>
      <Route exact path='/courses' component={CourseHome}/>
      <Route exact path='/team' component={Team}/>
@@ -27,8 +32,11 @@ const App = () => {
       <Route exact path='/journal' component={blog}/>
       <Route exact path='/contact' component={Contact}/>
       <Route exact path='/form' component={EnrollmentForm}/>
+      <Route exact path='/login' component={Login}/>
+      <Route exact path='/loginform' component={LoginForm}/>
+      <Route exact path='/forgot' component={Forgot}/>
     </Switch>
-    <Footer />
+  
    </Router>
     </div>
   )

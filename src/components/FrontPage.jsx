@@ -1,13 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Title from './Title'
-import AboutCard from './AboutCard'
-import HAbout from './HAbout'
-import Test from '../Test'
-import Hblog from '../Hblog'
-import Hprice from '../Hprice'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import Footer from '../footer'
 function Home() {
   // eslint-disable-next-line react/prop-types
   return (
@@ -19,22 +13,17 @@ function Home() {
       <p className='home-p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, temporibus ratione accusamus possimus tenetur aspernatur neque eius consectetur fugiat aperiam officia dolor dolores, iusto quis exercitationem eligendi vitae et? Quam?</p>
       <div className='button-home'>
         <button className='primary-btn'>
-          GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
+          STUDENT LOGIN <i className='fa fa-long-arrow-alt-right'></i>
         </button>
-        <Link To=''><button>
-          VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
+        <Link to='/login'><button>
+          ADMIN LOGIN <i className='fa fa-long-arrow-alt-right'></i>
         </button></Link>
       </div>
     </div>
   </div>
 </section>
 <div className='margin'></div>
-<AboutCard />
-<HAbout />
-<Test />
-<Hblog />
-<Hprice/>
-<Footer/>
+
     </div>
   )
 }
