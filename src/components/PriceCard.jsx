@@ -55,7 +55,7 @@ const PriceCard = () => {
             <div className='price-items shadow' key={index}>
               <h4>{val.name}</h4>
               <h1>
-                <span> $ </span>
+                <span> Rs. </span>
                 {val.price}
               </h1>
               <p>{val.desc}</p>

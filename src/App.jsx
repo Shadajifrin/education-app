@@ -15,6 +15,10 @@ import Login from './components/Login'
 import FrontPage from './components/FrontPage'
 import LoginForm from './components/LoginForm'
 import Forgot from './components/Forgot'
+import Reset from './components/Reset'
+import AddClass from './components/AddClass'
+
+
 
 const App = () => {
   return (
@@ -35,10 +39,16 @@ const App = () => {
       <Route exact path='/login' component={Login}/>
       <Route exact path='/loginform' component={LoginForm}/>
       <Route exact path='/forgot' component={Forgot}/>
+      <Route exact path='/reset' component={Reset}/>
+      <Route exact path='/addclass' component={AddClass}/>
+      
+
     </Switch>
   
    </Router>
+   
     </div>
+
   )
 }
 
